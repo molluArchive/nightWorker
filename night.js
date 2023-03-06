@@ -1,15 +1,15 @@
 let weapon = [
-    {key:'att',val:'low',per:5/90},
-    {key:'str',val:'low',per:5/90},
-    {key:'dex',val:'low',per:5/90},
-    {key:'int',val:'low',per:5/90},
-    {key:'hp',val:'low',per:5/90},
-    {key:'maxMp',val:'',per:5/90},
-    {key:'att',val:'high',per:8/90},
-    {key:'str',val:'high',per:8/90},
-    {key:'dex',val:'high',per:8/90},
-    {key:'int',val:'high',per:8/90},
-    {key:'hp',val:'high',per:8/90},
+    {key:'공격력',val:'100',per:5/90},
+    {key:'힘',val:'100',per:5/90},
+    {key:'민첩',val:'100',per:5/90},
+    {key:'지능',val:'100',per:5/90},
+    {key:'활력',val:'100',per:5/90},
+    {key:'최대마나',val:'100',per:5/90},
+    {key:'공격력',val:'200',per:8/90},
+    {key:'힘',val:'200',per:8/90},
+    {key:'민첩',val:'200',per:8/90},
+    {key:'지능',val:'200',per:8/90},
+    {key:'활력',val:'200',per:8/90},
     {key:'화속강',val:'3%',per:4/90},
     {key:'명속강',val:'3%',per:4/90},
     {key:'암속강',val:'3%',per:4/90},
@@ -28,7 +28,7 @@ let weapon_special = [
 // 확률 총합 계산
 function check(box){
     sum = 0
-    box.map((item,index)=>{
+    box.map((item,in민첩)=>{
         sum += item.per
     })
     console.log(sum)
