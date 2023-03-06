@@ -61,6 +61,7 @@ let special_per = 0.15 //특수옵션확률
 function run(item){
     let ranNum = Math.random()
     if(ranNum < upgrade_per && item.length < 6){
+        console.log('한줄 추가')
         item.push([])
     }
 
@@ -76,10 +77,24 @@ function run(item){
     return newItem
 }
 
+const before = document.getElementById('before')
+const after = document.getElementById('after')
+
+console.log(before)
+console.log(after)
+
+
 const button = document.getElementById('button')
 button.addEventListener('click',()=>{
     aa = run(aa)
-    aa.map((item)=>{
+    aa.map((item,index)=>{
+        after.children[index].textContent = item.key + ' ' + item.val
+        if(item.key[0] === '☆'){
+            console.log('dddsfa')
+            after.children[index].style.color = '#33FFFF'
+        } else {
+            after.children[index].style.color = '#000000'
+        }
         console.log(item.key + ' ' + item.val)
     })
     console.log('-------------')
