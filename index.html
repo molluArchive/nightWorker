@@ -14,25 +14,33 @@
       }
       #after {
         width: 400px;
-        height: 300px;
         position: absolute;
-        top: 397px;
-        left: 19px;
+        top: 355px;
+        left: 16px;
         z-index: 1;
       }
       #after > p {
         color: #7572cb;
-        font-weight: 600;
-        font-size: 19px;
+        font-weight: 800;
+        font-size: 16.5px;
         margin: -3px;
       }
       #modal {
-        width: 0px;
-        height: 0px;
-        overflow: hidden;
+        position: absolute;
+        width: 400px;
+        top: 620px;
       }
-      button {
-        z-index: 100;
+      #log_list > p {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 5px;
+      }
+      #button {
+        width: 400px;
+        height: 100px;
+        background-color: aqua;
+        font-size: 50px;
+        display: flex;
       }
     </style>
   </head>
@@ -45,7 +53,7 @@
     </details>
     <br />
     <div id="root">
-      <img src="./watch.jpg" width="450px" />
+      <img src="./watch.jpg" width="400px" />
       <div id="after">
         <p>공격력 +100</p>
         <p></p>
@@ -54,8 +62,15 @@
         <p></p>
         <p></p>
       </div>
-      <button id="button">사용</button>
-      <p id="count">사용횟수 : 0</p>
+      <div>
+        <div id="button">
+          <img src="./aaa.JPG" alt="" />
+          <img src="./aaa.JPG" alt="" />
+          <img src="./aaa.JPG" alt="" />
+          <img src="./aaa.JPG" alt="" />
+        </div>
+        <p id="count">사용횟수 : 0</p>
+      </div>
       <button id="log_button">로그 보기</button>
     </div>
     <div id="modal">
