@@ -61,7 +61,6 @@ let special_per = 0.15 //특수옵션확률
 function run(item){
     let ranNum = Math.random()
     if(ranNum < upgrade_per && item.length < 6){
-        console.log('한줄 추가')
         item.push([])
     }
 
@@ -80,13 +79,17 @@ function run(item){
 const before = document.getElementById('before')
 const after = document.getElementById('after')
 const count_box = document.getElementById('count')
+const log_button = document.getElementById('log')
 let count = 0
+let log = []
 
 const button = document.getElementById('button')
 button.addEventListener('click',()=>{
     aa = run(aa)
     count++
     count_box.textContent = '사용횟수 : '+count
+
+    log_data = ''
     aa.map((item,index)=>{
         after.children[index].textContent = item.key + ' ' + item.val
         if(item.key[0] === '☆'){
@@ -94,5 +97,14 @@ button.addEventListener('click',()=>{
         } else {
             after.children[index].style.color = '#000000'
         }
+        log_data += item.key + ' ' + item.val + ','
     })
+    if(log.length>=10){
+        log.shift()
+    }
+    log.push(log_data)
+})
+
+log_button.addEventListener('click',()=>{
+    console.log(log)
 })
