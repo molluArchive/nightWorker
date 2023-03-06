@@ -79,23 +79,20 @@ function run(item){
 
 const before = document.getElementById('before')
 const after = document.getElementById('after')
-
-console.log(before)
-console.log(after)
-
+const count_box = document.getElementById('count')
+let count = 0
 
 const button = document.getElementById('button')
 button.addEventListener('click',()=>{
     aa = run(aa)
+    count++
+    count_box.textContent = '사용횟수 : '+count
     aa.map((item,index)=>{
         after.children[index].textContent = item.key + ' ' + item.val
         if(item.key[0] === '☆'){
-            console.log('dddsfa')
             after.children[index].style.color = '#33FFFF'
         } else {
             after.children[index].style.color = '#000000'
         }
-        console.log(item.key + ' ' + item.val)
     })
-    console.log('-------------')
 })
